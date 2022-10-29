@@ -16,18 +16,7 @@
     <link rel="stylesheet" href="css/contato.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <script>
-      $(document).ready(function(){
-
-        $("#btn").click(function(){
-          $(".input, .area").val("");
-
-        });
-
-
-      });
-      
-    </script>
+    
 
   </head>
   <body>
@@ -36,7 +25,7 @@
       <!--Nav e Header-->
           <header class="head my-3">
               <nav class="navbar navbar-expand-lg navbar-light head__custom-nav">
-                  <a class="navbar-brand d-flex align-items-center" href="#">
+                  <a class="navbar-brand d-flex align-items-center" href="index.html">
                       <img src="img/rocket-ship-svgrepo-com.png" alt="logotipo">
                       <span>FRONTENDERS</span>
                   </a>
@@ -74,7 +63,7 @@
         
         <div class="login">
           <input type="text" placeholder="Seu Nome" class="input">
-          <input type="text" placeholder="Seu Email" class="input">
+          <input type="text" placeholder="Seu Email" class="input" required>
         </div>
         
         <div class="subject">
@@ -85,7 +74,7 @@
           <textarea  class="area" placeholder="Escreva sua Mensagem"></textarea>
         </div>
         
-        <div id="btn">Envie sua mensagem</div>
+        <div id="btn" onclick="alert()">Envie sua mensagem</div>
       </div>
     </section>
 
@@ -178,7 +167,7 @@
 
       <div class="col-md-4">
 
-      <div class="card">
+      <div class="card mb-5">
           <div class="img">
               <img src="img/fabricio.jpg"  alt="Fabricio">
           </div>
@@ -198,7 +187,7 @@
 
       <!-- segundo card -->
       <div class="col-md-4">
-      <div class="card">
+      <div class="card mb-5">
         <div class="img">
           <img src="./img/wando.jpg" alt="wando">
           </div>
@@ -218,7 +207,7 @@
     </div>
       <!-- terceiro card -->
       <div class="col-md-4">
-      <div class="card">
+      <div class="card mb-5">
           <div class="img">
               <img src="./img/gabriel.jpg" alt="gabriel">
           </div>
@@ -237,14 +226,14 @@
     </div>
     </div> <!--fim row-->
 
-    <!--fodse   --> 
+  
     
     <!-- quarto card -->
 
     <div class="row">
 
       <div class="col-md-4">
-      <div class="card">
+      <div class="card mb-5">
         <div class="img">
             <img src="img/PATRICK.jpg" alt="ptk">
         </div>
@@ -263,7 +252,7 @@
       </div>
     <!-- quinto card -->
       <div class="col-md-4">
-    <div class="card">
+    <div class="card mb-5">
         <div class="img">
             <img src="img/ygor.jpg" alt="ygor">
         </div>
@@ -284,7 +273,7 @@
 
     <!-- sexto card -->
     <div class="col-md-4">
-    <div class="card">
+    <div class="card mb-5">
         <div class="img">
             <img src="img/eduardo.jpg" alt="eduardo">
         </div>
@@ -303,7 +292,7 @@
   </div>
   <div class="col-md-4">
 
-    <div class="card">
+    <div class="card mb-5">
       <div class="img">
           <img src="img/lucas.jpg" alt="lucas">
       </div>
@@ -362,9 +351,9 @@
 
       <div class="info-footer"> 
       <h4> Fronts.me</h4>
-      <a class="text-info" href="#"><p > Sobre a Fronts</p></a>
-      <a href="#"><p class="text-info">Contato</p></a>
-      <a href="#"><p class="text-info" > Planos</p></a>
+      <a class="text-info" href="contato.html"><p > Sobre a Fronts</p></a>
+      <a href="contato.html"><p class="text-info">Contato</p></a>
+      <a href="serviço.html"><p class="text-info" > Planos</p></a>
       </div>
 
       <div class="info-footer-redes-socias" >
@@ -393,6 +382,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
     </script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
@@ -400,9 +391,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
     </script> 
     <script src="script/script.js"></script>
+  
     <script src="https://kit.fontawesome.com/96367fad0f.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("#btn").click(function(){
+          $(".input, .area").val("");
+
+        });
 
 
-    <script src="https://kit.fontawesome.com/5a8991e980.js" crossorigin="anonymous"></script>
+      });
+
+      function alert(){
+        swal({
+  title: "Mensagem enviada com sucesso!",
+  text: "Entraremos em contato em breve!",
+  icon: "success",
+});
+      }
+      
+    </script>
   </body>
 </html>
